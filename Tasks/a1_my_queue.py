@@ -3,10 +3,15 @@ My little Queue
 """
 from typing import Any
 
+# append()-> O(1)
+# pop(-1)-> O(1)
+# insert()-> O(N) кроме последнего элемента
+# del -> O(N) кроме последнего элемента
+
 
 class Queue:
     def __init__(self):
-        ...  # todo для очереди можно использовать python list
+        self.queue = []  # начало очереди слева, конец справа
 
     def enqueue(self, elem: Any) -> None:
         """
@@ -15,8 +20,7 @@ class Queue:
         :param elem: element to be added
         :return: Nothing
         """
-        print(elem)
-        return None
+        self.queue.append(elem)
 
     def dequeue(self) -> Any:
         """
@@ -24,7 +28,7 @@ class Queue:
 
         :return: dequeued element
         """
-        return None
+        self.queue.pop(0)
 
     def peek(self, ind: int = 0) -> Any:
         """
@@ -33,8 +37,7 @@ class Queue:
         :param ind: index of element (count from the beginning)
         :return: peeked element
         """
-        print(ind)
-        return None
+        return self.queue[int]
 
     def clear(self) -> None:
         """
@@ -42,4 +45,4 @@ class Queue:
 
         :return: None
         """
-        return None
+        del self.queue

@@ -37,7 +37,15 @@ class Stack:
         """
         #reversed_stack = reversed(self.stack)
         reversed_index = -ind - 1
+        if len(self.stack) == 0:
+            return None
+        if ind == 0:
+            reversed_index = len(self.stack) - 1
+        if ind > len(self.stack) - 1:
+            raise ValueError
         return self.stack[reversed_index]
+
+
 
     def clear(self) -> None:
         """
