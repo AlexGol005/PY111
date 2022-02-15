@@ -17,4 +17,4 @@ def fib_iterative(n: int) -> int:
     :return: Fibonacci number
     """
     print(n)
-    return 0
+    return 1
