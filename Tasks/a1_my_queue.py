@@ -34,6 +34,9 @@ class Queue:
         :param ind: index of element (count from the beginning)
         :return: peeked element
         """
+        if ind > len(self.queue) - 1:
+            raise ValueError
+
         return self.queue[ind]
 
     def clear(self) -> None:
