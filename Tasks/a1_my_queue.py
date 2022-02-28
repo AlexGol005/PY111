@@ -34,14 +34,7 @@ class Queue:
         :param ind: index of element (count from the beginning)
         :return: peeked element
         """
-        reversed_index = -ind - 1
-        if not self.queue:
-            return None
-        if ind > len(self.queue) - 1:
-            return None
-        return self.queue[int]
-
-
+        return self.queue.clear[int]
 
     def clear(self) -> None:
         """
@@ -50,11 +43,3 @@ class Queue:
         :return: None
         """
         self.queue.clear()
-
-    def __str__(self):
-        return(str(self.queue))
-
-a = Queue()
-for i in range(10):
-    a.enqueue(i)
-print(a)
