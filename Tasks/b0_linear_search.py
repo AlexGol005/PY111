@@ -16,5 +16,16 @@ def min_search(arr: Sequence) -> int:
     :param arr: Массив, содержащий числа
     :return: индекс первого появления минимального элемента в массиве
     """
-    print(arr)
-    return -1
+
+    i = 0
+    min_ = arr[i]
+    while i < len(arr):
+        if arr[i] < min_:
+            min_ = arr[i]
+            i += 1
+        elif arr[i] >= min_:
+            i += 1
+    return arr.index(min_)
+arr = [2, 1, 2, -1, -11, 2, 7,-10, 7, -12, 8]
+print(arr)
+print(min_search(arr))
