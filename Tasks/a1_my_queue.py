@@ -28,7 +28,12 @@ class Queue:
 
         :return: dequeued element
         """
-        self.queue.pop(0)
+        if len(self.queue) == 0:
+            return None
+        else:
+            a = self.queue[0]
+            self.queue.pop(0)
+            return a
 
     def peek(self, ind: int = 0) -> Any:
         """
@@ -37,6 +42,8 @@ class Queue:
         :param ind: index of element (count from the beginning)
         :return: peeked element
         """
+        if len(self.queue) == 0 or ind > len(self.queue) -1:
+            return None
         return self.queue[ind]
 
     def clear(self) -> None:
@@ -45,7 +52,8 @@ class Queue:
 
         :return: None
         """
-        self.queue.clear
+        self.queue.clear()
+
     def __str__(self):
         return str(self.queue)
 
