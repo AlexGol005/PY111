@@ -13,6 +13,12 @@ def get_item_n(x, n):
     """
     return ((-1) ** (n - 1) * x ** (2 * n - 1)) / math.factorial(2 * n - 1)
 
+def get_item_n_1(x, n):
+    """
+    Очередной элемент бесконечного ряда по общей формуле из интернета
+    """
+    return (x ** n) / (math.factorial(n))
+
 
 def ex(x: Union[int, float]) -> float:
     """
@@ -21,8 +27,12 @@ def ex(x: Union[int, float]) -> float:
     :param x: x value
     :return: e^x value
     """
-    print(x)
-    return 0
+    sum_ = 1
+    for i in count(1, 1):
+        current_item = get_item_n_1(x, i)
+        sum_ += current_item
+        if abs(current_item) <= EPSILON:
+            return sum_
 
 
 
