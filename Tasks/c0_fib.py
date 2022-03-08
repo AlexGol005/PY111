@@ -6,7 +6,7 @@ def fib_recursive(n: int) -> int:
     :return: Fibonacci number
     """
     if n < 0:
-        raise  ValueError
+        raise ValueError
     if n == 0:
         return 0
     if n == 1:
@@ -22,7 +22,7 @@ def fib_iterative(n: int) -> int: #O(n)
     :return: Fibonacci number
     """
     if n < 0:
-        raise  ValueError
+        raise ValueError
     if n == 0:
         return 0
     if n == 1:
