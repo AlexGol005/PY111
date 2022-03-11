@@ -8,6 +8,7 @@ from typing import Any
 
 class PriorityQueue:
     def __init__(self):
+        # начало слева . конец справа
         self.priorityqueue = []  # todo для очереди можно использовать python dict
 
     def enqueue(self, elem: Any, priority: int = 0) -> None:
@@ -21,8 +22,6 @@ class PriorityQueue:
             "elem": elem,
             "priority": priority
         }
-        if not self.priorityqueue:
-            self.priorityqueue.append(item)
 
         for index, current_item in enumerate(self.priorityqueue):
             if item["priority"] >= current_item["priority"]:
@@ -30,8 +29,6 @@ class PriorityQueue:
                 break
         else:
             self.priorityqueue.append(item)
-
-
 
 
 
